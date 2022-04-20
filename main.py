@@ -14,7 +14,7 @@ def init_gee():
     credentials, project_id = google.auth.default(scopes=auth_scopes)
 
     print("Using credentials:")
-    print(credentials.to_json())
+    print(credentials.__dict__)
 
     ee.Initialize(credentials)
 
