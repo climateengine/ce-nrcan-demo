@@ -3,6 +3,8 @@ import time
 
 import ee
 import google.auth
+from google.auth import compute_engine
+
 from google.oauth2.credentials import Credentials
 
 
@@ -12,6 +14,8 @@ def init_gee():
     auth_scopes = ['https://www.googleapis.com/auth/earthengine',
                    'https://www.googleapis.com/auth/devstorage.full_control']
     credentials, project_id = google.auth.default(scopes=auth_scopes)
+
+    credentials = compute_engine.Credentials(scopes=['https://www.googleapis.com/auth/earthengine'])
 
     print("Using credentials:")
     print(credentials.__dict__)
