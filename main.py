@@ -2,11 +2,17 @@ import datetime
 import time
 
 import ee
+import google.auth
 
 
 def init_gee():
-    ee.Authenticate()  # Use application default credentials to authenticate to GEE
-    ee.Initialize()
+
+    # Initialize GEE using Application Default Credentials
+    auth_scopes = ['https://www.googleapis.com/auth/earthengine',
+                   'https://www.googleapis.com/auth/devstorage.full_control']
+    credentials, project_id = google.auth.default(scopes=auth_scopes)
+
+    ee.Initialize(credentials)
 
 
 def main():
