@@ -3,6 +3,7 @@ import time
 
 import ee
 import google.auth
+from google.oauth2.credentials import Credentials
 
 
 def init_gee():
