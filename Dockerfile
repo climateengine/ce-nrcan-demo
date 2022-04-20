@@ -4,4 +4,4 @@ RUN pip install earthengine-api
 
 COPY main.py .
 
-CMD ['python', 'main.py']
+CMD ["python", "main.py"]
