@@ -13,6 +13,9 @@ def init_gee():
                    'https://www.googleapis.com/auth/devstorage.full_control']
     credentials, project_id = google.auth.default(scopes=auth_scopes)
 
+    print("Using credentials:")
+    print(credentials.to_json())
+
     ee.Initialize(credentials)
 
 
