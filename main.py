@@ -5,7 +5,7 @@ import ee
 
 
 def init_gee():
-    ee.Authenticate(auth_mode='appdefault')  # Use application default credentials to authenticate to GEE
+    ee.Authenticate()  # Use application default credentials to authenticate to GEE
     ee.Initialize()
 
 
