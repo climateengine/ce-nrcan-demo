@@ -2,6 +2,7 @@ apiVersion: batch/v1beta1  # apiVersion: batch/v1 on GKE 1.21+
 kind: CronJob
 metadata:
   name: ce-nrcan-demo
+  namespace: default
 spec:
   schedule: "*/2 * * * *"  # Every 2 minutes!
   jobTemplate:
