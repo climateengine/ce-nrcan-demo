@@ -15,8 +15,6 @@ def init_gee():
                    'https://www.googleapis.com/auth/devstorage.full_control']
     credentials, project_id = google.auth.default(scopes=auth_scopes)
 
-    credentials = compute_engine.Credentials(scopes=['https://www.googleapis.com/auth/earthengine'])
-
     print("Using credentials:")
     print(credentials.__dict__)
 
