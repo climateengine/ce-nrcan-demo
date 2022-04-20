@@ -1,4 +1,4 @@
-apiVersion: batch/v1
+apiVersion: batch/v1beta1  # apiVersion: batch/v1 on GKE 1.21+
 kind: CronJob
 metadata:
   name: ce-nrcan-demo
@@ -9,5 +9,7 @@ spec:
       template:
         spec:
           containers:
-          - name: hello
-            image: busybox:1.28
+          - name: ce-nrcan-demo
+            image: gcr.io/ce-nrcan-demo/ce-nrcan-demo
+            imagePullPolicy: Always
+          restartPolicy: Never
