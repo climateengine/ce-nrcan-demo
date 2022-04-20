@@ -11,9 +11,7 @@ from google.oauth2.credentials import Credentials
 def init_gee():
 
     # Initialize GEE using Application Default Credentials
-    service_account = '55161481160-compute@developer.gserviceaccount.com'
-    credentials = ee.ServiceAccountCredentials(service_account, '/var/run/secret/cloud.google.com/service-account.json')
-
+    credentials = compute_engine.Credentials(scopes=['https://www.googleapis.com/auth/earthengine'])
     print(credentials.__dict__)
 
     ee.Initialize(credentials)
