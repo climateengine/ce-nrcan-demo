@@ -13,14 +13,14 @@ spec:
           - name: ce-nrcan-demo
             image: gcr.io/ce-nrcan-demo/ce-nrcan-demo:latest
             imagePullPolicy: Always
-            env:
-              - name: "GOOGLE_APPLICATION_CREDENTIALS"
-                value: "/var/run/secret/cloud.google.com/service-account.json"
-            volumeMounts:
-              - mountPath: "/var/run/secret/cloud.google.com"
-                name: "service-account"
-          volumes:
-            - name: "service-account"
-              secret:
-                secretName: "sa-json"
+            #env:
+            #  - name: "GOOGLE_APPLICATION_CREDENTIALS"
+            #    value: "/var/run/secret/cloud.google.com/service-account.json"
+            #volumeMounts:
+            #  - mountPath: "/var/run/secret/cloud.google.com"
+            #    name: "service-account"
+          #volumes:
+          #  - name: "service-account"
+          #    secret:
+          #      secretName: "sa-json"
           restartPolicy: OnFailure
