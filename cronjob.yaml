@@ -4,7 +4,7 @@ metadata:
   name: ce-nrcan-demo
   namespace: default
 spec:
-  schedule: "0 0 0 0 0"  # Every 5 minutes!
+  schedule: "1 1 1 1 1"
   jobTemplate:
     spec:
       template:
