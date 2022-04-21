@@ -11,10 +11,9 @@ from google.oauth2.credentials import Credentials
 def init_gee():
 
     # Initialize GEE using Application Default Credentials
-    credentials = compute_engine.Credentials(scopes=['https://www.googleapis.com/auth/earthengine'])
-    print(credentials.__dict__)
-
+    credentials, project_id = google.auth.default()
     ee.Initialize(credentials)
+
 
 
 def main():
